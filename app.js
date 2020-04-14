@@ -1,9 +1,9 @@
-// import functions and data 
-import rawProducts from './data/products.js'; 
+// // import functions and data 
+// import rawProducts from './data/products.js'; 
 
-//establish remaining products from rawProducts 
-const allRemainingProducts = rawProducts.slice(); //to make a copy of allRemaingProducts but not mutate the state (live different palces in memory)
-const unchosenProducts = []; //make a new array
+// //establish remaining products from rawProducts 
+// const allRemainingProducts = rawProducts.slice(); //to make a copy of allRemaingProducts but not mutate the state (live different palces in memory)
+// const unchosenProducts = []; //make a new array
 
 
 
