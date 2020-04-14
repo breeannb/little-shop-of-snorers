@@ -118,7 +118,7 @@ const wineglass = {
     image: '../assets/products/wine-glass.jpg',
 };
 
-const products = {
+const rawProducts = {
     bag, 
     banana, 
     bathroom, 
@@ -141,4 +141,4 @@ const products = {
     wineglass
 };
 
-export default products; 
+export default rawProducts; 
