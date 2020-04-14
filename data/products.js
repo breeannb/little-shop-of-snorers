@@ -1,9 +1,7 @@
 const bag = { 
-
     id: 'R2D2-bag', 
     name: 'R2D2 Bag', 
     image: '../assets/products/bag.jpg', 
-
 }; 
 
 const banana = {
