@@ -32,6 +32,7 @@ function getThreeProducts() {
     let productTwo = getRandomProduct(rawProducts);
     let productThree = getRandomProduct(rawProducts);
     console.log(productOne);
+    
     // make sure all three products are completely different from one another 
     while (productOne.id === productTwo.id || productTwo.id === productThree.id || productThree.id === productOne.id) {
         productOne = getRandomProduct(rawProducts); 
