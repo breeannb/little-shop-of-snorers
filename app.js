@@ -14,7 +14,7 @@ const productRadioTwo = document.getElementById('product-two');
 const productRadioThree = document.getElementById('product-three');
 
 // const productName = document.getElementById('product-name'); 
-const button = document.getElementById('next-button'); 
+// const button = document.getElementById('next-button'); 
 
 //////////////////////////////////////////////////////////////
 
@@ -61,14 +61,14 @@ const myForm = document.getElementById('add-new-product');
 myForm.addEventListener('submit', () => {
     event.preventDefault(); //with a form event listener, we have to prevent default or it will change the URL
     const userChoice = document.querySelector('input[type=radio]:checked').value;
-    const myFormData = new FormData(myForm); 
+    // const myFormData = new FormData(myForm); 
 
-    const individualProduct = { 
-        productOneId: productRadioOne.value, //get items off the form data using the name of the field and 'get' method
-        productTwoId: productRadioTwo.value,
-        productThreeId: productRadioThree.value, 
+    // const individualProduct = { 
+    //     productOneId: productRadioOne.value, //get items off the form data using the name of the field and 'get' method
+    //     productTwoId: productRadioTwo.value,
+    //     productThreeId: productRadioThree.value, 
 
-    };
+    // };
 
     console.log(userChoice);
     // console.log(productRadioOne);
