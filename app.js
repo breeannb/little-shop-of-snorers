@@ -9,13 +9,14 @@ const imageOne = document.getElementById('image-one');
 const imageTwo = document.getElementById('image-two'); 
 const imageThree = document.getElementById('image-three');
 
-// const productOptionOne = document.getElementById('product-one');
-// const productOptionTwo = document.getElementById('product-two');  
-// const productOptionThree = document.getElementById('product-three'); 
+const productRadioOne = document.getElementById('product-one'); 
+const productRadioTwo = document.getElementById('product-two');
+const productRadioThree = document.getElementById('product-three');
 
 // const productName = document.getElementById('product-name'); 
 const button = document.getElementById('next-button'); 
 
+//////////////////////////////////////////////////////////////
 
 // get a random product from my rawArray 
 function getRandomProduct(rawProducts) { 
@@ -31,8 +32,8 @@ function getThreeProducts() {
     let productOne = getRandomProduct(rawProducts);
     let productTwo = getRandomProduct(rawProducts);
     let productThree = getRandomProduct(rawProducts);
-    console.log(productOne);
-    
+    // console.log(productOne);
+
     // make sure all three products are completely different from one another 
     while (productOne.id === productTwo.id || productTwo.id === productThree.id || productThree.id === productOne.id) {
         productOne = getRandomProduct(rawProducts); 
@@ -45,11 +46,39 @@ function getThreeProducts() {
     imageTwo.src = productTwo.image; 
     imageThree.src = productThree.image; 
 
+    productRadioOne.value = productOne.id; 
+    productRadioTwo.value = productTwo.id;
+    productRadioThree.value = productThree.id;
+
 }
 
+//Step 3 
+//form 
+const myForm = document.getElementById('add-new-product'); 
+// creating form by form id in html 
+
 // event listener for submit button 
+myForm.addEventListener('submit', () => {
+    event.preventDefault(); //with a form event listener, we have to prevent default or it will change the URL
+    const userChoice = document.querySelector('input[type=radio]:checked').value;
+    const myFormData = new FormData(myForm); 
 
-button.addEventListener('submit', (getThreeProducts)); 
-getThreeProducts();  
+    const individualProduct = { 
+        productOneId: productRadioOne.value, //get items off the form data using the name of the field and 'get' method
+        productTwoId: productRadioTwo.value,
+        productThreeId: productRadioThree.value, 
 
+    };
+
+    console.log(userChoice);
+    // console.log(productRadioOne);
+    
+    getThreeProducts();
+}); 
+  
+getThreeProducts();
+
+/////////////////////////////////////
+
+//instantiate the formData object 
 
