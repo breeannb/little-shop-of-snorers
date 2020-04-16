@@ -2,6 +2,8 @@
 
 // // import functions and data 
 import rawProducts from './data/products.js'; 
+import votesArray from './votesArray.js';
+import { findById } from './findById.js'; 
 // import { ProductsArray } from './products-array.js'; 
 
 // establish products and corresponding images from html
@@ -72,7 +74,44 @@ myForm.addEventListener('submit', () => {
 
     console.log(userChoice);
     // console.log(productRadioOne);
-    
+
+    //retrieving existing votes array from Local Storage. If no votesarray, we need an empty array. IF there is, we need to json.parse to unstringify
+    let votesArrayInLocalStorage = localStorage.getItem('VOTESARRAY'); // set variable to cart in local storage
+
+    let votesArray; //creating votesArray holder
+
+    //if there is a votesArray holder: turn a string into an object
+    if (votesArrayInLocalStorage) { 
+        votesArray = JSON.parse(votesArrayInLocalStorage); 
+    } 
+    else { // if no votesArray, go make an empty array for votesArray 
+        votesArray = []; 
+    }
+
+    //now that we have a votesArray product, lets have a product that is the same kind
+    let votesArrayItem = findById(votesArray, productRadioOne.value); 
+
+            //**This is where my images start disappearing**
+
+    // if findByID finds nothing of this type in the votesarray container
+    if (!votesArrayItem) { // votesarray item is the radio button id, timesseen and timesviewed
+        const newItem = { 
+            id: productRadioOne.value, 
+            timesSeen: 3, 
+            timesPicked: 1
+        }; 
+
+        votesArray.push(newItem); //push item into cart
+    } else {
+        votesArrayItem.timesPicked++; 
+        votesArrayItem.timesPicked++;// if there is an item in votes array container, add another to the quantity 
+    }
+
+    // stringify our votes array container
+    const stringVotesArray = JSON.stringify(votesArray); 
+    // put string in local storage
+    localStorage.setItem('VOTESARRAY', stringVotesArray); 
+
     getThreeProducts();
 }); 
   

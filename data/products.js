@@ -1,17 +1,17 @@
 const bag = { 
-    id: 'R2D2-bag', 
+    id: 'bag', 
     name: 'R2D2 Bag', 
     image: './assets/bag.jpg', 
 }; 
 
 const banana = {
-    id: 'banana-cutter', 
+    id: 'banana', 
     name: 'Banana Cutter', 
     image: './assets/banana.jpg',
 }; 
 
 const bathroom = {
-    id: 'bathroom-display', 
+    id: 'bathroom', 
     name: 'Bathroom Display', 
     image: './assets/bathroom.jpg',
 }; 
@@ -65,7 +65,7 @@ const pen = {
 };
 
 const petsweep = {
-    id: 'pet-sweep', 
+    id: 'petsweep', 
     name: 'Pet Sweep', 
     image: './assets/pet-sweep.jpg',
 };
