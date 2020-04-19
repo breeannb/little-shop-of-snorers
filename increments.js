@@ -1,5 +1,6 @@
 // import findByID
 import { findById } from './findById.js'; 
+import votesArray from './votesArray.js';
 
 // add initial vote 
 export function addInitialVoteItem(id, votes) { 
