@@ -117,7 +117,3 @@ myForm.addEventListener('submit', () => {
   
 getThreeProducts();
 
-/////////////////////////////////////
-
-//instantiate the formData object 
-
