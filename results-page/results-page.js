@@ -1,32 +1,4 @@
-// // import votes array with set increments of seen and picked views 
-// import votesArray from './votesArray.js'; 
-
-// // get votesArray in local storage to the Results webpage
-// const votesArrayInLocalStorage = localStorage.getItem('VOTESARRAY'); // getItem from local Storage, the stringyProduct, and set the votesArrayInLocalStorage
-// let votesArray; 
-
-// if (productsInLocalStorage ) {  //if votesArray in local storage exists 
-//     votesArray = JSON.parse(votesArrayInLocalStorage ); //parse(unstringify) the votesArray
-// }
-// else { 
-//     votesArray = []; // initialize the votesArray 
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//for later 
 
 
 // // Chart 
