@@ -1,3 +1,5 @@
+// Step 1: Data with id, image, and name 
+
 const bag = { 
     id: 'bag', 
     name: 'R2D2 Bag', 
