@@ -11,7 +11,7 @@ const votesArray = [
     
     { id: 'bathroom', 
         timesSeen: 3, 
-        timesPicked: 1
+        timesPicked: 2
     },
 
     { id: 'boots', 
@@ -96,7 +96,7 @@ const votesArray = [
 
     { id: 'wineglass', 
         timesSeen: 3, 
-        timesPicked: 1
+        timesPicked: 2
     },
 ]; 
 
