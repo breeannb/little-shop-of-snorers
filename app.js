@@ -2,6 +2,7 @@
 
 // // import functions and data 
 import rawProducts from './data/products.js'; 
+import findById from './common/find-by-id.js';
 
 // establish products and corresponding images from html static design or the DOM
 const imageOne = document.getElementById('image-one'); 
@@ -44,17 +45,15 @@ function getThreeProducts() {
 }
 
 
-
-
 const myForm = document.getElementById('add-new-product'); 
 
 // event listener for submit button 
 myForm.addEventListener('submit', () => {
     event.preventDefault(); //with a form event listener, we have to prevent default or it will change the URL
-    const userChoice = document.querySelector('input[type=radio]:checked').value;
-    const myFormData = new FormData(myForm); 
+    // const userChoice = document.querySelector('input[type=radio]:checked').value;
+    // const myFormData = new FormData(myForm); 
 
-    console.log(userChoice);
+    // console.log(userChoice);
 
 
     //retrieving existing votes array from Local Storage. If no votesarray, we need an empty array. IF there is, we need to json.parse to unstringify
