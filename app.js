@@ -3,6 +3,7 @@
 // // import functions and data 
 import rawProducts from './data/products.js'; 
 import findById from './common/find-by-id.js';
+// import { incremementTimesPicked, incremementTimesSeen } from './increments.js';
 
 // establish products and corresponding images from html static design or the DOM
 const imageOne = document.getElementById('image-one'); 
@@ -89,6 +90,8 @@ myForm.addEventListener('submit', () => {
     localStorage.setItem('VOTESARRAY', stringVotesArray); 
 
     getThreeProducts();
+    // incremementTimesPicked(); 
+    // incremementTimesSeen();
 }); 
 
 getThreeProducts();
